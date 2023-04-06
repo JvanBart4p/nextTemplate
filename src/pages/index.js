@@ -12,3 +12,11 @@ export default function Home() {
     </>
   );
 }
+
+// export async function getServerSideProps(ctx) {
+//   let data = await fetch(`${process.env.REACT_APP_API_URL}/users`);
+//   console.log(data.json());
+//   return {
+//     props: {},
+//   };
+// }
