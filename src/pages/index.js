@@ -3,9 +3,11 @@ import Button from "../components/Button";
 export default function Home() {
   return (
     <>
-      <main>
-        <div>My NextJS app</div>
-        <Button />
+      <main className="home">
+        <div className="home__section-one">
+          <h1>NextJS app Template</h1>
+          <Button />
+        </div>
       </main>
     </>
   );
