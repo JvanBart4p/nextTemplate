@@ -8,4 +8,7 @@
     &:hover {
         background-color: $secondary-color;
     }
+    @include desktop {
+        background-color: green;
+    }
 }
