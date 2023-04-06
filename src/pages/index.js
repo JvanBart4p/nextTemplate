@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Button from "../components/Button";
+// import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Home() {
   const [message, setMessage] = useState("");
@@ -20,6 +22,9 @@ export default function Home() {
           <Button click={handleClick} />
           <h2>{message}</h2>
           <h2>{secondMessage}</h2>
+          <Link href={"/dashboard"} passHref>
+            Dashboard
+          </Link>
         </div>
       </main>
     </>
