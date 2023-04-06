@@ -1,7 +1,7 @@
-export default function Button() {
+export default function Button({click}) {
   return (
     <div>
-      <button className="button-home">Click here</button>
+      <button onClick={click} className="button-home">Click here</button>
     </div>
   );
 }
