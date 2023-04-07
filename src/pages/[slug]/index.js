@@ -1,9 +1,23 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+
 const Items = ({ dataObject }) => {
-  console.log(dataObject);
+  const [selectedProduct, setSelectedProduct] = useState("");
+  const router = useRouter();
+  console.log(router.asPath.replace(/%20/g, " "));
+
+  useEffect(() => {
+    dataObject.products.map((item) => {
+      if (router.asPath.replace(/%20/g, " ").replace("/", "") == item.title) {
+        setSelectedProduct(item);
+      }
+    });
+  }, dataObject);
+
   return (
     <main>
       <h1>Hello</h1>
-      <div>{dataObject.products[0].title}</div>
+      <div>{selectedProduct.title}</div>
     </main>
   );
 };
@@ -23,7 +37,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(ctx) {
   let dataObject = {};
-  await fetch("https://dummyjson.com/products")
+  const res = await fetch("https://dummyjson.com/products")
     .then((res) => res.json())
     .then((json) => (dataObject = json));
   return {
@@ -32,3 +46,5 @@ export async function getStaticProps(ctx) {
     },
   };
 }
+
+// .replace(/\s+/g, "-").toLowerCase()
