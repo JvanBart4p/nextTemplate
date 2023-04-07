@@ -1,4 +1,13 @@
+@charset "UTF-8";
+
 //pages
 @forward "../styles/pages/index.scss";
+@forward "../styles/pages/dashboard.scss";
 //components
-@forward "../styles/components/button.scss";
+@forward "../styles/components/tools/button.scss";
+@forward "../styles/components/tools/searchbar.scss";
+@forward "../styles/components/tools/scrollprogressbar.scss";
+@forward "../styles/components/products.scss";
+//layout
+@forward "../styles/components/layout/header.scss";
+@forward "../styles/components/layout/footer.scss";

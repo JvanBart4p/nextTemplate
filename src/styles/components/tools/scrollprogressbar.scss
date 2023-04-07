@@ -1,0 +1,13 @@
+@use "../../variables.scss" as *;
+
+#scroll-progress {
+  position: fixed;
+  top: 6rem;
+  width: 0%;
+  height: 2rem;
+  background: #478f86;
+  z-index: 10000;
+  @include tablet {
+    top: 7rem;
+  }
+}
