@@ -42,8 +42,9 @@ body {
     main {
       position: relative;
       flex-grow: 1;
+      margin-top: 7rem;
       @include desktop {
-        margin-top: 4rem;
+        margin-top: 7rem;
       }
     }
   }

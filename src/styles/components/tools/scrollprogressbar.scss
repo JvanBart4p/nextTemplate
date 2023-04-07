@@ -4,10 +4,10 @@
   position: fixed;
   top: 6rem;
   width: 0%;
-  height: 2rem;
+  height: 0.2rem;
   background: #478f86;
   z-index: 10000;
   @include tablet {
-    top: 7rem;
+    top: 6rem;
   }
 }
