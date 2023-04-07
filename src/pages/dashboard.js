@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 const Dashboard = () => {
   const router = useRouter();
   return (
-    <div>
+    <main>
       <div>Dashboard</div>
       <button
         onClick={() => {
@@ -12,7 +12,7 @@ const Dashboard = () => {
       >
         Home
       </button>
-    </div>
+    </main>
   );
 };
 

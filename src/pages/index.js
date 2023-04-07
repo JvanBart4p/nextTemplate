@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Button from "../components/Button";
+import Button from "../components/tools/Button";
 
 import Link from "next/link";
 
