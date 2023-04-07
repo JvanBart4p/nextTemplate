@@ -1,0 +1,13 @@
+@use "../variables.scss";
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__section-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

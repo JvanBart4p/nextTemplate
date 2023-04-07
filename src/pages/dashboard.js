@@ -4,14 +4,18 @@ const Dashboard = () => {
   const router = useRouter();
   return (
     <main>
-      <div>Dashboard</div>
-      <button
-        onClick={() => {
-          router.push("/");
-        }}
-      >
-        Home
-      </button>
+      <div className="dashboard">
+        <div className="dashboard__section-one">
+          <div>Dashboard</div>
+          <button
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            Home
+          </button>
+        </div> 
+      </div>
     </main>
   );
 };

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../../public/images/Logo_4PROCES_Groot-1.png";
 
 const Header = () => {
@@ -6,7 +7,9 @@ const Header = () => {
     <div className="header">
       <div className="header__wrapper">
         <div className="header__image">
-          <Image src={logo} width={100} height={50} alt="test" />
+          <Link href={"/"}>
+            <Image src={logo} width={100} height={50} alt="test" />
+          </Link>
         </div>
         <div>
           <ul className="header__links">
