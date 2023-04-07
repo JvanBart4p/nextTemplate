@@ -1,0 +1,22 @@
+@use "../../variables.scss" as *;
+
+.header {
+  border-bottom: 1px solid gray;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  &__image {
+    img {
+      object-fit: contain;
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+}
