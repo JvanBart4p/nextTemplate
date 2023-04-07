@@ -9,6 +9,7 @@
   }
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
+    max-width: 132rem;
   }
   &__card {
     margin: 2rem 1rem;
