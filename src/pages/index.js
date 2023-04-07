@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 import Link from "next/link";
 
-export default function Home() {
+export default function Home({ data }) {
   const [message, setMessage] = useState("");
   const [secondMessage, setSecondMessage] = useState("");
   const handleClick = () => {
@@ -14,6 +14,7 @@ export default function Home() {
       setSecondMessage("thanks for clicking");
     }
   }, [message]);
+  console.log(data);
   return (
     <>
       <main className="home">
@@ -29,4 +30,12 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getServersideProps(ctx) {
+  let data = await fetch(`${process.env.REACT_APP_API_URL}/users`);
+  console.log(data);
+  return {
+    props: { data },
+  };
 }
