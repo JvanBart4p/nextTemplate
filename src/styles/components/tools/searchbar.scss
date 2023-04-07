@@ -3,10 +3,10 @@
 .searchbar {
   background-color: rgba(187, 173, 173, 0.5);
   border: 1px solid black;
-  margin: 1rem 0;
+  margin: 1rem 2rem;
   border-radius: 2rem;
   padding: 0.2rem 0.4rem;
-  width: 100%;
+  width: 90%;
   &:hover {
     box-shadow: 0 0 10px 3px blue;
     background-color: rgba(255, 255, 255, 0.6);
@@ -16,7 +16,7 @@
     background-color: rgba(255, 255, 255, 0.6);
   }
   @include tablet {
-    // max-width: 40vw;
+    max-width: 70%;
   }
   @include desktop {
     width: 45rem;
