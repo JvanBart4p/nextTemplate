@@ -46,5 +46,3 @@ export async function getStaticProps(ctx) {
     },
   };
 }
-
-// .replace(/\s+/g, "-").toLowerCase()
