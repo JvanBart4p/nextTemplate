@@ -2,6 +2,11 @@
 
 .header {
   border-bottom: 1px solid gray;
+  position: fixed;
+  width: 100%;
+  background-color: bisque;
+  z-index: 5;
+  height: 6rem;
   &__wrapper {
     display: flex;
     justify-content: space-between;
