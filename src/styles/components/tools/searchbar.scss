@@ -1,0 +1,39 @@
+@use "../../variables.scss" as *;
+
+.searchbar {
+  background-color: rgba(187, 173, 173, 0.5);
+  border: 1px solid black;
+  margin: 1rem 0;
+  border-radius: 2rem;
+  padding: 0.2rem 0.4rem;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 0 10px 3px blue;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  &:onfocus {
+    box-shadow: 0 0 10px 3px blue;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  @include tablet {
+    // max-width: 40vw;
+  }
+  @include desktop {
+    width: 45rem;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+
+  input {
+    border: none;
+    width: 90%;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    &:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+}

@@ -3,6 +3,8 @@ import Button from "../components/tools/Button";
 import Products from "@/components/Products";
 
 import Link from "next/link";
+import SearchBar from "@/components/tools/SearchBar";
+import ScrollProgressBar from "@/components/tools/ScrollProgressBar";
 
 export default function Home({ dataObject }) {
   const [message, setMessage] = useState("");
@@ -18,6 +20,7 @@ export default function Home({ dataObject }) {
 
   return (
     <>
+      <ScrollProgressBar />
       <main className="home">
         <h1>NextJS app Template</h1>
         <div className="home__section-one">
