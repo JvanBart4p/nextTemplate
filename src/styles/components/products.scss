@@ -1,0 +1,21 @@
+@use "../variables.scss" as *;
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__card {
+    margin: 2rem 1rem;
+    border: 1px solid blue;
+    padding: 2rem;
+    h3 {
+      margin: 1rem;
+    }
+  }
+}

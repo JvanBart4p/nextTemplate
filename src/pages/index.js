@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Button from "../components/tools/Button";
+import Products from "@/components/Products";
 
 import Link from "next/link";
 
@@ -14,7 +15,7 @@ export default function Home({ dataObject }) {
       setSecondMessage("thanks for clicking");
     }
   }, [message]);
-  console.log(dataObject.products);
+
   return (
     <>
       <main className="home">
@@ -26,11 +27,9 @@ export default function Home({ dataObject }) {
           <Link href={"/dashboard"} passHref>
             Dashboard
           </Link>
-          {dataObject &&
-            dataObject.products &&
-            dataObject.products.map((product, index) => {
-              return <div key={`${product.id}${index}`}>{product.title}</div>;
-            })}
+          {dataObject && dataObject.products && (
+            <Products data={dataObject.products} />
+          )}
         </div>
       </main>
     </>
@@ -39,7 +38,7 @@ export default function Home({ dataObject }) {
 
 export async function getServerSideProps(ctx) {
   let dataObject = {};
-  const data = await fetch("https://dummyjson.com/products")
+  await fetch("https://dummyjson.com/products")
     .then((res) => res.json())
     .then((json) => (dataObject = json));
   return {
