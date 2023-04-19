@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 async function GetData(type) {
-  const result = await fetch(`http://localhost:3030/api/${type}`, {
+  const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${type}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -28,7 +28,7 @@ async function GetData(type) {
 async function PostData(type, data = {}) {
   const csrf = await getCSRF();
 
-  const result = await fetch(`http://localhost:3030/api/${type}`, {
+  const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${type}`, {
     method: "POST",
     cache: "no-cache",
     headers: {
