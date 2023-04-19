@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 
 const Dashboard = () => {
   const router = useRouter();
+
   return (
     <main>
       <div className="dashboard">
@@ -14,7 +15,7 @@ const Dashboard = () => {
           >
             Home
           </button>
-        </div> 
+        </div>
       </div>
     </main>
   );

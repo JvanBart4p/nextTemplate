@@ -18,7 +18,9 @@ const Header = () => {
                 Dashboard
               </Link>
             </li>
-            <li>Header</li>
+            <li><Link href={"/login"} passHref>
+                Login
+              </Link></li>
             <li>Header</li>
           </ul>
         </div>

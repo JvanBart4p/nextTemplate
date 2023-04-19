@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import Button from "../components/tools/Button";
-import Products from "@/components/Products";
+// import Products from "@/components/Products";
+
 
 import Link from "next/link";
-import SearchBar from "@/components/tools/SearchBar";
 import ScrollProgressBar from "@/components/tools/ScrollProgressBar";
 
-
-export default function Home({ dataObject }) {
-
+export default function Home() {
   const [message, setMessage] = useState("");
   const [secondMessage, setSecondMessage] = useState("");
   const handleClick = () => {
@@ -32,9 +30,7 @@ export default function Home({ dataObject }) {
           <Link href={"/dashboard"} passHref>
             Dashboard
           </Link>
-          {dataObject && dataObject.products && (
-            <Products data={dataObject.products} />
-          )}
+          {/* {data && data.products && <Products data={data.products} />} */}
         </div>
       </main>
     </>
@@ -42,13 +38,16 @@ export default function Home({ dataObject }) {
 }
 
 export async function getServerSideProps(ctx) {
-  let dataObject = {};
-  await fetch("https://dummyjson.com/products")
-    .then((res) => res.json())
-    .then((json) => (dataObject = json));
+  // let dataObject = {};
+  // await fetch("https://dummyjson.com/products")
+  //   .then((res) => res.json())
+  //   .then((json) => (dataObject = json));
+
+
+
   return {
     props: {
-      dataObject,
+      // data: dataObject,
     },
   };
 }
