@@ -21,7 +21,7 @@ export default function Home({ data }) {
     <>
       <ScrollProgressBar />
       <main className="home">
-        <h1>NextJS app Template</h1>
+        <h1>NextJS App Template</h1>
         <div className="home__section-one">
           <Button click={handleClick} />
           <h2>{message}</h2>
