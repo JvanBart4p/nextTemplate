@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import Button from "../components/tools/Button";
 import Products from "@/components/Products";
 
-
 import Link from "next/link";
 import ScrollProgressBar from "@/components/tools/ScrollProgressBar";
 
-export default function Home({data}) {
+export default function Home({ data }) {
   const [message, setMessage] = useState("");
   const [secondMessage, setSecondMessage] = useState("");
   const handleClick = () => {
@@ -22,7 +21,7 @@ export default function Home({data}) {
     <>
       <ScrollProgressBar />
       <main className="home">
-        <h1>NextJS app Template</h1>
+        <h1>NextJS App Template</h1>
         <div className="home__section-one">
           <Button click={handleClick} />
           <h2>{message}</h2>
