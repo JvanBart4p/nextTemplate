@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import Button from "../components/tools/Button";
-// import Products from "@/components/Products";
-
+import Products from "@/components/Products";
 
 import Link from "next/link";
 import ScrollProgressBar from "@/components/tools/ScrollProgressBar";
 
-export default function Home() {
+export default function Home({ data }) {
   const [message, setMessage] = useState("");
   const [secondMessage, setSecondMessage] = useState("");
   const handleClick = () => {
@@ -30,7 +29,7 @@ export default function Home() {
           <Link href={"/dashboard"} passHref>
             Dashboard
           </Link>
-          {/* {data && data.products && <Products data={data.products} />} */}
+          {data && data.products && <Products data={data.products} />}
         </div>
       </main>
     </>
@@ -38,16 +37,14 @@ export default function Home() {
 }
 
 export async function getServerSideProps(ctx) {
-  // let dataObject = {};
-  // await fetch("https://dummyjson.com/products")
-  //   .then((res) => res.json())
-  //   .then((json) => (dataObject = json));
-
-
+  let dataObject = {};
+  await fetch("https://dummyjson.com/products")
+    .then((res) => res.json())
+    .then((json) => (dataObject = json));
 
   return {
     props: {
-      // data: dataObject,
+      data: dataObject,
     },
   };
 }
