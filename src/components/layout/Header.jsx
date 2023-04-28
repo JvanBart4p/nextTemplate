@@ -15,12 +15,14 @@ const Header = () => {
           <ul className="header__links">
             <li>
               <Link href={"/dashboard"} passHref>
-                Dashboard
+                Main
               </Link>
             </li>
-            <li><Link href={"/login"} passHref>
+            <li>
+              <Link href={"/login"} passHref>
                 Login
-              </Link></li>
+              </Link>
+            </li>
             <li>Header</li>
           </ul>
         </div>
